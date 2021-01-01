@@ -70,19 +70,20 @@ class ParserTest
 	@Test
 	public function testParseSequenceExample()
 	{
-    var s = new Spil.Scanner('5 "foo" bla ] not-included');
+    var s = new Spil.Scanner('5 "foo" ; comment \n     bla) not-included');
     Assert.areEqual(
         [Spil.Atom.Integer(5), Spil.Atom.Str('foo'), Spil.Atom.Symbol('bla')],
-        Spil.Parser.parseSequence(s, "]".code)
+        Spil.Parser.parseSequence(s, ")".code)
     );
 	}
 
 	@Test
 	public function testParseAtom()
 	{
-    var s = new Spil.Scanner('"foo" 934 my-symbol');
+    var s = new Spil.Scanner('"foo" 934 (4 5) my-symbol');
     Assert.areEqual(Spil.Atom.Str('foo'), Spil.Parser.parseAtom(s));
     Assert.areEqual(Spil.Atom.Integer(934), Spil.Parser.parseAtom(s));
+    Assert.isNotNull(Spil.Parser.parseAtom(s));
     Assert.areEqual(Spil.Atom.Symbol('my-symbol'), Spil.Parser.parseAtom(s));
     Assert.isNull(Spil.Parser.parseAtom(s));
 	}

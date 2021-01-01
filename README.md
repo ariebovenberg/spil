@@ -1,9 +1,14 @@
 Spil
 ====
 
-A simple lisp written in Haxe.
+A simple lisp parser in Haxe.
+Currently supported:
 
-Work in progress.
+- integers
+- strings
+- symbols
+- comments
+- lists
 
 Development guide
 -----------------

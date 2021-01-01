@@ -35,7 +35,7 @@ class Parser {
             case isLetter(_) => true: parseSymbol(s);
             case ASCII_LPAR: {
                 s.next();
-                List(parseSequence(s, ASCII_RPAR));
+                Atom.List(parseSequence(s, ASCII_RPAR));
             };
             case ASCII_QUOTE: parseString(s);
             case other: throw 'Invalid character in file: `${String.fromCharCode(other)}`, ASCII code ${s.current()}';
