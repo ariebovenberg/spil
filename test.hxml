@@ -1,0 +1,19 @@
+## Neko
+--next
+-main TestMain
+-lib munit
+-lib hamcrest
+-cp src
+
+-cp test
+-neko build/neko_test.n
+
+## Python
+--next
+-main TestMain
+-lib munit
+-lib hamcrest
+-cp src
+
+-cp test
+-python build/python_test.py
