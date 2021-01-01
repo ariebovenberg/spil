@@ -1,5 +1,10 @@
 5
-"hoi"
-foobar "another"
-(5 k "" ())
-; (set main (trace "hello world"))
+"hi"
+a-symbol 
+"another string \" with \\n escapes! \\" ; random comment
+(arbitrary (nesting k "" (of-lists)) parentheses-overload)
+"also, multiline lists!
+
+see?
+" 
+; alright, the file is now finished
