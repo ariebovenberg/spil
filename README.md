@@ -1,5 +1,5 @@
-Spil
-====
+🧃 Spil
+======
 
 A simple lisp parser in Haxe.
 Currently supported:
