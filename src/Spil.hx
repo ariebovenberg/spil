@@ -81,7 +81,7 @@ class Parser {
     }
 
     static private function isDigit(c: Char):Bool {
-        return if (ASCII_NINE >= c && c >= ASCII_ZERO) true else false;
+        return ASCII_NINE >= c && c >= ASCII_ZERO;
     }
 
     static private function isWhitespace(c: Char):Bool {
